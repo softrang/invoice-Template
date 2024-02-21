@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+   <title>Invoice Templete</title>
+    <link rel="stylesheet" href="css/style.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body >
+  <p id="print">   Printing System is comming soon..... </p> 
+ 
+    <div id="main_page">
+        
+        <div id="header">
+            
+            
+<div id="header-1">
+    <div id="header-2">
+
+        <div id="header-3"> </div>
+        <div id="header-4"></div>
+        <div id="header-5"> 
+            
+       
+            
+            <img id="imgchosen"   src="photo/logo.png"></div>
+           
+    </div>
+    
+   
+   
+    
+
+</div>
+<div id="invoice">
+    Invoice 
+
+</div>
+ 
+
+        </div>
+
+        <div id="page1">
+<h3> Invoice To&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h3>
+<h2><input id="inname" type="text" placeholder="Customar Nmae hare" maxlength="30"></h2>
+<h5><input id="indes" type="text" placeholder="Designation with address"></h5>
+</div>
+
+<div id="page">
+
+<table>
+<tr>
+    <td><i class="fa-solid fa-phone"></i></td>
+    <td>:<input id="inmob" type="text" placeholder="enter mobile No" maxlength="11"></td>
+    <td></td>
+    <td> Invoice Number</td>
+    <td>:<input id="innum" type="text" placeholder="enter invoic no" maxlength="6"> </td>
+</tr>
+<tr>
+    <td><i class="fa-solid fa-envelope"></i></td>
+   
+ <td>:<input id="inem" type="text" placeholder="enter e-mail" maxlength="20"></td>
+ <td></td>
+ <td>Invoice Date</td>
+<td>:<input id=indat type="date"></td>
+</tr>
+</table>
+
+
+</div>
+
+
+
+    <table id="toptabile">
+        <thead>
+        <tr>
+            
+                <th scope="row">SL No</th>
+                <th>Discription</th>
+                <th>QTY</th>
+                <th>CPQ</th>
+                <th>Amount</th>
+                <th><button id="btn" onclick="storedata()">+</button></th>
+                <th><button id="dell" name="sdel" class="dell1" onclick="cleardata()" >X</button></th>
+                
+        </tr>
+       
+        
+        </thead>
+       <tbody id= "TBody">
+            
+            <tr id="TRow">
+                <td><input id="sl" type="text"></td>
+                <td><input id="dic" type="text"></td>
+                <td><input id="qty" type="text" name="qtyy" onchange="Calculat(this)" ></td> 
+                <td><input id="cpq" type="text" name="cpqq" onchange="Calculat(this)"></td>
+                <td><input id="tot" type= "text" name="tott" disabled onchange="Calculat(this)" ></td>
+                <td id="fnone"><button id="dell2" name="sdel" onclick="cleardata()"></button></td>
+           
+            </tr>
+           
+
+        
+
+        
+
+
+
+
+
+
+        </tbody>
+
+    <tfoot id="TFoot">
+        <tr>
+            <td colspan="3" ></td>
+            
+            <td >Sub Total</td>
+            <td ><input id="total" name="ftotal" type="text" disabled value="0.00"></td>
+            
+
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+           
+            <td >GST</td>
+            <td id="gst">0.00</td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+          
+            <td >Total </td>
+            <td id="alltot">0.00</td>
+        </tr>
+       
+    </tfoot>
+    </table>
+
+
+<div id="pym">
+<table>
+    <tr>
+        <th colspan="2"><h3>Payment Methot </h3></th>
+        
+    </tr>
+<tr>
+    <td>Account</td>
+    <td colspan="5">:<input id="inamt" type="text" placeholder="Enter Account Number" maxlength="20"></td>
+    
+</tr>
+<tr>
+    <td>Methot</td>
+    <td>:<input id="inmethot" type="text" placeholder="Enter Methot" maxlength="20"></td>
+</tr>
+</table>
+</div>
+
+
+
+
+<div id="tram">
+    <p><strong>Treams & Condition</strong></p>
+    </br>
+        <textarea id="trams" rows="6", cols="70" maxlength="200" >
+Enter team ands condition
+        </textarea>
+    
+    
+    
+    <h4>Thanks for Invoice</h4>
+</div>
+
+
+    
+<div id="sing">
+    <table>
+<tr> <th ></th>
+    <th ></th>
+    <th ></th>
+    <th><img id="imgchos" src="photo/sign.png"></th>
+</tr>
+
+        <tr>
+            <td><i class="fa-solid fa-phone"></i> <input id="inph" type="text" placeholder="Enter Company Phone" maxlength="11"></td>
+            <td><i class="fa-solid fa-envelope"></i> <input id="ineml" type="text" placeholder="Enter Company e-mail" maxlength="17"></td>
+            <td><i class="fa-solid fa-location-dot"></i> <input id="inad" type="text" placeholder="Enter Company Address" maxlength="16"></td>
+            <td><input id="inad" type="text"  value="Signature" disabled></td>
+        </tr>
+    </table>
+</div>
+
+
+<div id="footer">
+            
+            
+    <div id="footer-1">
+        <div id="footer-2">
+    
+            <div id="footer-3"> </div>
+            <div id="footer-4"></div>
+    
+        </div>
+        <div id="footer-22">
+    
+            <div id="footer-33"> </div>
+         
+    
+        </div>
+
+
+    
+    </div>
+    <div id="footer-5">
+       
+    </div>
+     
+    
+            </div>
+
+
+</div>
+
+  
+
+
+<label for="uplodbtn" id="uplodeimge"><i class="fa-solid fa-cloud-arrow-up"></i> Uplode Logo</label> <input id="uplodbtn" type="file" accept="image/*">
+
+
+<label for="uplodbto" id="uplodeimge"><i class="fa-solid fa-cloud-arrow-up"></i> Uplode Singnature</label> <input id="uplodbto" type="file" accept="image/*">
+
+
+
+
+
+
+
+    <script src="css/index.js"></script>
+</body>
+</html>
